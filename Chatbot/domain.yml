@@ -1,0 +1,94 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - course_prof
+  - credits_for_course
+  - room_for_course
+  - compre_for_course
+  - courses_under_department
+  - courseid_for_course
+  - get_section
+
+entities:
+  - name
+  - coursenameF
+  - coursenameS
+  - coursetitle
+  - section
+
+slots:
+  name:
+    type: text
+  coursenameF:
+    type: text
+  coursenameS:
+    type: text
+  coursetitle:
+    type: text
+  section:
+    type: text
+
+responses:
+  utter_greet:
+  - text: "Hey {name}! How are you?"
+  - text: "Hi {name}. How can I help?"
+  - text: "Slot stored is {name}"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_course_prof:
+  - text: "Slot stored is {coursenameF} {coursenameS}"
+  - text: "select {coursenameF} {coursenameS}, PROF from course"
+
+  utter_credits_for_course:
+  - text: "Slot stored is {coursenameF} {coursenameS}"
+
+  utter_room_for_course:
+  - text: "What section are you looking for?"
+  # - text: "Slot stored is {coursenameF} {coursenameS}"
+
+  utter_get_section:
+  - text: "{coursenameF} {coursenameS} - {section}"
+
+  utter_compre_for_course:
+  - text: "Slot stored is {coursenameF} {coursenameS}"
+
+  utter_courses_under_department:
+  - text: "Slot stored is {coursenameF}"
+
+  utter_courseid_for_course:
+  - text: "Slot stored is {coursetitle}"
+
+actions:
+  - action_hello_world
+  - action_course_prof
+  - action_credits_for_course
+  - action_room_for_course
+  - action_compre_for_course
+  - action_courses_under_department
+  - action_courseid_for_course
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

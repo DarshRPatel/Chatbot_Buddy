@@ -1,0 +1,70 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: prof_for_course
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: course_prof
+  # - action: utter_course_prof
+  - action: action_course_prof
+
+- story: credits_for_course
+  steps:
+  - intent: credits_for_course
+  - action: action_credits_for_course
+
+- story: room_for_course
+  steps:
+  - intent: room_for_course
+  - action: action_room_for_course
+
+- story: compre_for_course
+  steps:
+  - intent: compre_for_course
+  - action: action_compre_for_course
+
+- story: courses_under_department
+  steps:
+  - intent: courses_under_department
+  - action: action_courses_under_department
+
+- story: courseid_for_course
+  steps:
+  - intent: courseid_for_course
+  - action: action_courseid_for_course
+
+- story: room_for_course
+  steps:
+  - intent: room_for_course
+  - action: utter_room_for_course
+  - intent: get_section
+  - action: action_room_for_course

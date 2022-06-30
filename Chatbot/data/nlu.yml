@@ -1,0 +1,204 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello, my name is [Darsh](name)
+    - hi, i am [Darsh](name)
+    - hello, my name is [Saransh](name)
+    - hi, i am [Saransh](name)
+    - hello, my name is [Shubhechchha](name)
+    - hi, i am [Shubhechchha](name)
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: course_prof
+  examples: |
+    - Who teaches [BIO](coursenameF) [F110](coursenameS)?
+    - Who teaches [BITS](coursenameF) [F210](coursenameS)?
+    - Who teaches [CS](coursenameF) [F432](coursenameS)?
+    - Who teaches [HS](coursenameF) [F121](coursenameS)?
+    - Who teaches [CHEM](coursenameF) [F432](coursenameS)?
+    - Professor who teaches [BIO](coursenameF) [F110](coursenameS)?
+    - Professor who teaches [BITS](coursenameF) [F210](coursenameS)?
+    - Professor who teaches [CS](coursenameF) [F432](coursenameS)?
+    - Professor who teaches [HS](coursenameF) [F121](coursenameS)?
+    - Professor who teaches [CHEM](coursenameF) [F432](coursenameS)?
+
+- intent: credits_for_course
+  examples: |
+    - What are the credits for course [BIO](coursenameF) [F110](coursenameS)?
+    - What are the credits for course [MATH](coursenameF) [F212](coursenameS)?
+    - What are the credits for course [CS](coursenameF) [F301](coursenameS)?
+    - What are the credits for course [BIO](coursenameF) [F418](coursenameS)?
+    - How many units does course [CS](coursenameF) [F214](coursenameS) have?
+    - How many units does course [MATH](coursenameF) [F113](coursenameS) have?
+    - How many units does course [BIO](coursenameF) [F211](coursenameS) have?
+    - How many units does course [EEE](coursenameF) [F411](coursenameS) have?
+    - How many credits does course [BIO](coursenameF) [F111](coursenameS) carry?
+    - How many credits does course [MATH](coursenameF) [F421](coursenameS) carry?
+    - How many credits does course [CS](coursenameF) [F320](coursenameS) carry?
+    - How many credits does course [EEE](coursenameF) [F215](coursenameS) carry?
+
+- intent: room_for_course
+  examples: |
+    - What is the room number for course [CS](coursenameF) [F215](coursenameS)?
+    - What is the room number for course [BIO](coursenameF) [F110](coursenameS)?
+    - What is the room number for course [MATH](coursenameF) [F212](coursenameS)?
+    - What is the room number for course [BIO](coursenameF) [F418](coursenameS)?
+    - Which is the classroom for course [CS](coursenameF) [F214](coursenameS) have?
+    - Which is the classroom for course [MATH](coursenameF) [F113](coursenameS) have?
+    - Which is the classroom for course [BIO](coursenameF) [F211](coursenameS) have?
+    - Which is the classroom for course [EEE](coursenameF) [F411](coursenameS) have?
+    - In which classroom does course [BIO](coursenameF) [F111](coursenameS) carry?
+    - In which classroom does course [MATH](coursenameF) [F421](coursenameS) carry?
+    - In which classroom does course [CS](coursenameF) [F320](coursenameS) carry?
+    - In which classroom does course [EEE](coursenameF) [F215](coursenameS) carry?
+
+- intent: get_section
+  examples: |
+    - [L1](section)
+    - [L2N](section)
+    - [P1](section)
+    - [P15](section)
+    - [T3](section)
+    - [P12N](section)
+    - [L7](section)
+    - [T7N](section)
+    - [L2M](section)
+    - [P10M](section)
+
+- intent: compre_for_course
+  examples: |
+    - When is the compre of [BIO](coursenameF) [F110](coursenameS)?
+    - When is the compre of [MATH](coursenameF) [F212](coursenameS)?
+    - When is the compre of [CS](coursenameF) [F301](coursenameS)?
+    - When is the compre of [BIO](coursenameF) [F418](coursenameS)?
+    - What is the compre date of course [CS](coursenameF) [F214](coursenameS) have?
+    - What is the compre date of course [MATH](coursenameF) [F113](coursenameS) have?
+    - What is the compre date of course [BIO](coursenameF) [F211](coursenameS) have?
+    - What is the compre date of course [EEE](coursenameF) [F411](coursenameS) have?
+    - When is the compre scheduled for course [BIO](coursenameF) [F111](coursenameS) carry?
+    - When is the compre scheduled for course [MATH](coursenameF) [F421](coursenameS) carry?
+    - When is the compre scheduled for course [CS](coursenameF) [F320](coursenameS) carry?
+    - When is the compre scheduled for course [EEE](coursenameF) [F215](coursenameS) carry?
+
+- intent: courses_under_department
+  examples: |
+    - Which are the courses offered under the department [CS](coursenameF)?
+    - Which are the courses offered under the department [BIO](coursenameF)?
+    - Which are the courses offered under the department [MATH](coursenameF)?
+    - Which are the courses offered under the department [CHEM](coursenameF)?
+    - Which are the courses offered under the department [HSS](coursenameF)?
+    - What courses are offered under the department [GS](coursenameF)?
+    - What courses are offered under the department [EEE](coursenameF)?
+    - What courses are offered under the department [CS](coursenameF)?
+    - What courses are offered under the department [MBA](coursenameF)?
+    - What courses are offered under the department [PHA](coursenameF)?
+    - What courses does [MATH](coursenameF) department offer?
+    - What courses does [CS](coursenameF) department offer?
+    - What courses does [PHY](coursenameF) department offer?
+    - What courses does [ECON](coursenameF) department offer?
+    - What courses does [EEE](coursenameF) department offer?
+
+- intent: courseid_for_course
+  examples: | 
+    - What is the course ID for course [DIGITAL DESIGN](coursetitle)?
+    - What is the course ID for course [COMPUTER PROGRAMMING](coursetitle)?
+    - What is the course ID for course [GENERAL CHEMISTRY](coursetitle)?
+    - What is the course ID for course [FLUID MECHANICS](coursetitle)?
+    - What is the course ID for course [SURVEYING](coursetitle)?
+    - What is the course ID for course [TECHNICAL REPORT WRITING](coursetitle)?
+    - What is the course ID for course [THERMODYNAMICS](coursetitle)?
+    - What is the course ID for course [MICROBIOLOGY](coursetitle)?
+    - What is the course ID of [GENERAL BIOLOGY](coursetitle)?
+    - What is the course ID of [OPTIMIZATION](coursetitle)?
+    - What is the course ID of [SUPPLY CHAIN MANAGEMENT](coursetitle)?
+    - What is the course ID of [INTRODUCTORY PHILOSOPHY](coursetitle)?
+    - What is the course ID of [INTERNET OF THINGS](coursetitle)?
+    - What is the course ID of [ARTIFICIAL INTELLIGENCE](coursetitle)?
